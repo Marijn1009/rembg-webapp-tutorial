@@ -33,8 +33,8 @@ Install dependencies: Use ```pip install xxx``` or in bulk use ```pip install -r
 - Deploy app from local python: Run the app.py script. (Either ```python app.py``` in terminal, or from VS code press run. It's the same.)
 - Use docker container:
     - Make sure 'Docker desktop' is started so Docker deamon is running
-    - Build image and give it a name: ```docker build -t image_rmbg .``` (see created images using ```docker images```)
-    - Run image, give it a name and expose a port: ```docker run --name my_rmbg -p 5100:5100 image_rmbg```
+    - Build image and give it a name: ```docker build -t image_rmbg_slim .``` (see created images using ```docker images```)
+    - Run image, give it a name and expose a port: ```docker run --name my_rmbg -p 5100:5100 image_rmbg_slim```
         - The app is hard-coded in app.py to use port 5100, so it needs to be x:5100. But the first one can be any port on the host machine that you want to map. For example 8000:5100 and access it via localhost:8000.
     - Access the app at website `localhost:5100'
 
@@ -51,3 +51,5 @@ git commit -a -m "Message"
 git push
 ```
 
+### Rest
+- Good idea from youtube comment section: use the python slim image to go from 2GB to 1.2GB size.
